@@ -17,7 +17,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @author Tsingyun(青雲)
  * @version V1.0
  * @createTime 2020/10/26 22:27
- * @Blog https://mindidea.org
+ * @blog https://mindidea.org
  */
 public class NettyServer {
 

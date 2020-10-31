@@ -12,7 +12,7 @@ import java.nio.IntBuffer;
  * @author Tsingyun(青雲)
  * @version V1.0
  * @createTime 2020/10/26 23:18
- * @Blog https://mindidea.org
+ * @blog https://mindidea.org
  */
 public class BasicBuffer {
 

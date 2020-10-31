@@ -13,7 +13,7 @@ import io.netty.channel.socket.SocketChannel;
  * @author Tsingyun(青雲)
  * @version V1.0
  * @createTime 2020/10/26 22:38
- * @Blog https://mindidea.org
+ * @blog https://mindidea.org
  */
 public class MyChannelInitializer extends ChannelInitializer<SocketChannel> {
 

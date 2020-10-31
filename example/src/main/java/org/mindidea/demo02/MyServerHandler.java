@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
  * @author Tsingyun(青雲)
  * @version V1.0
  * @createTime 2020/10/26 23:09
- * @Blog https://mindidea.org
+ * @blog https://mindidea.org
  */
 public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
