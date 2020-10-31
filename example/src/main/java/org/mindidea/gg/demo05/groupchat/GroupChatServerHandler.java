@@ -11,6 +11,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.util.AttributeKey;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
 import java.time.LocalDateTime;
@@ -30,8 +31,18 @@ public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> 
             new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     @Override
+    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+        Channel channel = ctx.channel();
+        AttributeKey<String> key = AttributeKey.valueOf("thiskey");
+        String s = channel.attr(key).get();
+    }
+
+    @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
+        AttributeKey<String> key = AttributeKey.valueOf("thiskey");
+        String s = channel.attr(key).get();
+
         // 将客户端加入的信息推送给其他客户端
         channels.writeAndFlush(localDateTime() + "「客户端」" + channel.remoteAddress() + "加入聊天\n");
         channels.add(channel);
