@@ -41,7 +41,7 @@ public class NettyClient {
                     });
             System.out.println("client is ok ...");
 
-            ChannelFuture cf = bootstrap.connect("127.0.0.1", 6688).sync();
+            ChannelFuture cf = bootstrap.connect("127.0.0.1", 7000).sync();
             cf.channel().closeFuture().sync();
         } finally {
             eventExecutors.shutdownGracefully();
