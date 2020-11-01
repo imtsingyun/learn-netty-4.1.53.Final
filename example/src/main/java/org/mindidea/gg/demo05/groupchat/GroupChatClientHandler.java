@@ -22,4 +22,8 @@ public class GroupChatClientHandler extends SimpleChannelInboundHandler<String> 
         System.out.println(msg.trim());
     }
 
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        super.channelActive(ctx);
+    }
 }
