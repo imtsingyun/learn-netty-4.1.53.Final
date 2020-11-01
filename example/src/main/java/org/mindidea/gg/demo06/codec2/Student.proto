@@ -3,6 +3,8 @@ option optimize_for = SPEED;  // 加快解析
 option java_package = "org.mindidea.gg.demo06.codec2";
 option java_outer_classname = "MyDataInfo";
 
+// >protoc.exe --java_out=. Student.proto
+
 message MyMessage {
   enum DataType {
     StudentType = 0;
